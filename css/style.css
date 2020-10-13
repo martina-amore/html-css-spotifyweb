@@ -1,0 +1,73 @@
+/* DA RIMUOVERE DOPO */
+.container.debug {
+    border: 1px solid white;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERALI */
+.super-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+/* SEZIONE LEFT-NAVBAR */
+#left-navbar .container {
+    background-color: black;
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: calc(100vh - 90px);
+    width: 200px;
+}
+
+/* SEZIONE TOP-UPGRADE */
+#top-upgrade .container {
+    height: 90px;
+    opacity: 0.5;
+    background-color: red;
+    position: fixed;
+    z-index: 0;
+}
+
+/* SEZIONE TOP-NAVBAR */
+#top-navbar .container {
+    background-color: yellow;
+    padding-top: 100px;
+    height: 150px;
+}
+
+/* MAIN-CONTAINER */
+.main-container {
+    float: left;
+    background-color: lightgreen;
+}
+
+#main .container {
+    width: calc(100vw - 200px);
+    height: calc(100vh - 240px);
+    font-size: 100px;
+    overflow: scroll;
+}
+
+/* FOOTER */
+#bottom-bar .container {
+    background-color: lightblue;
+    height: 90px;
+}
+
+#bottom-bar .flex {
+    display: flex;
+    justify-content: flex-end;
+}
