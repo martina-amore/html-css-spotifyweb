@@ -10,17 +10,22 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
 /* GENERALI */
 .super-container {
     width: 100vw;
     height: 100vh;
 }
 
-.container::after {
+/* .container::after {
     clear: both;
     display: table;
     content: "";
-}
+} */
 
 /* SEZIONE LEFT-NAVBAR */
 #left-navbar .container {
@@ -29,21 +34,156 @@
     position: relative;
     z-index: 1;
     height: calc(100vh - 90px);
-    width: 200px;
+    width: 230px;
+    padding-top: 95px;
+    color: white;
+    position: relative;
+}
+
+#left-navbar .start img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.start .home img{
+    margin-left: 15px;
+}
+
+.start .cerca, .start .libreria img{
+    margin-left: 20px;
+}
+
+#left-navbar ul li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#left-navbar ul {
+    list-style-type: none;
+}
+
+#left-navbar a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+#left-navbar a:hover {
+    color: white;
+}
+
+.home {
+    border-left: 4px solid #adff2f;
+}
+
+#left-navbar .fa.fa-plus-square {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#left-navbar .start {
+    margin-bottom: 25px;
+}
+
+#left-navbar .playlist-and-bottom {
+    margin-left: 20px;
+}
+
+#left-navbar .playlist-and-bottom h4 {
+    margin-bottom: 10px;
+}
+
+#left-navbar h4 {
+    display: inline-block;
+}
+
+#left-navbar .playlist {
+    margin-top: 10px;
+}
+
+#left-navbar ul.playlist li {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.left-navbar-bottom {
+    position: absolute;
+    bottom: 0;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.left-navbar-bottom .install-app img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.left-navbar-bottom h4, h5 {
+    display: inline;
+}
+
+.left-navbar-bottom h4 {
+    margin-left: 5px;
+}
+
+.left-navbar-bottom h5 {
+    margin-left: 5px;
+}
+
+.left-navbar-bottom .install-app {
+    margin-bottom: 5px;
+}
+
+.left-navbar-bottom .utente {
+    margin-top: 8px;
+}
+
+.left-navbar-bottom .utente img {
+    background-color: grey;
+    border-radius: 50%;
+    width: 25px;
+    vertical-align: middle;
 }
 
 /* SEZIONE TOP-UPGRADE */
 #top-upgrade .container {
+    width: 100vw;
     height: 90px;
-    opacity: 0.5;
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
-    z-index: 0;
+    z-index: 1;
+}
+
+#top-upgrade .container.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-upgrade img.xs-display-none {
+    width: 150px;
+    margin-left: 19px;
+}
+
+#top-upgrade img.md-display-none {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.button-upgrade  {
+    border: 1px white solid;
+    background-color: transparent;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding: 10px 40px;
+    margin-right: 5px;
+    float: right;
 }
 
 /* SEZIONE TOP-NAVBAR */
 #top-navbar .container {
-    background-color: yellow;
+    background-color: #141922;
     padding-top: 100px;
     height: 150px;
 }
@@ -51,14 +191,15 @@
 /* MAIN-CONTAINER */
 .main-container {
     float: left;
-    background-color: lightgreen;
+    background-color: #141922;
+    color: white;
 }
 
 #main .container {
-    width: calc(100vw - 200px);
+    width: calc(100vw - 230px);
     height: calc(100vh - 240px);
-    font-size: 100px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /* FOOTER */
@@ -70,4 +211,59 @@
 #bottom-bar .flex {
     display: flex;
     justify-content: flex-end;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 767px) {
+    #left-navbar .container {
+        width: 50px;
+    }
+
+    #main .container {
+        width: calc(100vw - 50px);
+    }
+
+    .xs-display-none {
+        display: none;
+    }
+
+    #left-navbar h4 {
+        display: none;
+    }
+
+    .start .home, .start .cerca, .start .libreria img{
+        margin-left: 10px;
+    }
+
+    .home {
+        border-left: 0;
+    }
+
+    .start .home img{
+        margin-left: 0;
+    }
+
+    #left-navbar .playlist-and-bottom {
+        margin-left: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .sm-display-none {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .md-display-none {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .lg-display-none {
+        display: none;
+    }
 }
