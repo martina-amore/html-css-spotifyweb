@@ -210,7 +210,7 @@ body {
     float: left;
     background-color: #141922;
     color: white;
-    width: calc(100vw - 250px);
+    width: calc(100% - 230px);
     height: calc(100vh - 90px);
     overflow-y: scroll;
     overflow-x: hidden;
@@ -415,11 +415,11 @@ body {
     }
 
     .album {
-        flex-basis: 10%;
+        width: calc(100% / 2 - 20px);
     }
 
     .album img {
-        flex-basis: 100%;
+        min-width: 140px;
     }
 }
 
