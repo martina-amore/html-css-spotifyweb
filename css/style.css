@@ -1,8 +1,3 @@
-/* DA RIMUOVERE DOPO */
-/* .container.debug {
-    border: 1px solid white;
-} */
-
 /* RESET */
 * {
     margin: 0;
@@ -15,18 +10,18 @@ body {
     font-weight: 600;
 }
 
-/* GENERALI */
-/* .container::after {
-    clear: both;
-    display: table;
-    content: "";
-} */
+.super-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
 
 /* SEZIONE LEFT-NAVBAR */
 #left-navbar .container {
     background-color: black;
     float: left;
     height: calc(100vh - 90px);
+    min-height: 600px;
     width: 230px;
     padding-top: 95px;
     color: white;
@@ -69,12 +64,24 @@ ul.start li img {
     filter: opacity(0.4);
 }
 
-ul.start img:hover {
+ul.start li:hover h4  {
+    color: white;
+}
+
+ul.start li:hover img  {
     filter: opacity(1);
 }
 
 .home {
     border-left: 4px solid #adff2f;
+}
+
+li .home h4 {
+    color: white;
+}
+
+ul.start li .home img {
+    filter: opacity(1);
 }
 
 #left-navbar .fa.fa-plus-square {
@@ -88,6 +95,7 @@ ul.start img:hover {
 
 #left-navbar .playlist-and-bottom {
     margin-left: 20px;
+    height: 70%;
 }
 
 #left-navbar .playlist-and-bottom h4 {
@@ -98,9 +106,14 @@ ul.start img:hover {
     display: inline-block;
 }
 
-#left-navbar .playlist {
+#left-navbar .box-playlist {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 60%;
+}
+
+#left-navbar ul.playlist {
     margin-top: 10px;
-    /* overflow: scroll; */
 }
 
 #left-navbar ul.playlist li {
@@ -109,8 +122,8 @@ ul.start img:hover {
 }
 
 .left-navbar-bottom {
-    position: sticky;
-    bottom: 30%;
+    position: absolute;
+    bottom: 0;
     padding-right: 40px;
     padding-bottom: 10px;
     width: 100%;
@@ -123,7 +136,11 @@ ul.start img:hover {
     cursor: pointer;
 }
 
-.install-app:hover .install-app img {
+.install-app:hover h5 {
+    color: white;
+}
+
+.install-app:hover img {
     filter: opacity(1);
 }
 
@@ -153,9 +170,13 @@ ul.start img:hover {
     cursor: pointer;
 }
 
+.left-navbar-bottom hr {
+    opacity: 0.5;
+}
+
 /* SEZIONE TOP-UPGRADE */
 #top-upgrade .container {
-    width: 100%;
+    width: 100vw;
     height: 90px;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -215,26 +236,13 @@ ul.start img:hover {
     margin-right: 15px;
 }
 
-#top-navbar ul.menu-top li {
+.menu-top .border {
     border-bottom: 2px solid #adff2f;
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
 }
-
-/* .slider .bar {
-    width: 400px;
-    border: 2px solid #5a5a5a;
-    border-radius: 10%;
-    position: relative;
-    cursor: pointer;
-}
-
-.slider-right .bar {
-    width: 100px;
-    border: 2px solid #5a5a5a;
-    border-radius: 10%;
-    position: relative;
-    cursor: pointer;
-} */
-
 
 #top-navbar ul.menu-top a {
     color: rgba(255, 255, 255, 0.5);
@@ -274,7 +282,7 @@ ul.start img:hover {
 }
 
 .album img {
-    flex-basis: 100%;
+    width: 100%;
     opacity: 1;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -354,6 +362,9 @@ ul.start img:hover {
     padding-right: 19px;
 }
 
+#bottom-bar .slider-central {
+}
+
 #bottom-bar h6 a {
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
@@ -420,15 +431,16 @@ ul.start img:hover {
 }
 
 .slider .bar {
-    width: 400px;
+    width: 30vw;
     border: 2px solid #5a5a5a;
     border-radius: 10%;
     position: relative;
     cursor: pointer;
+    min-width: 200px;
 }
 
 .slider-right .bar {
-    width: 100px;
+    width: 8vw;
     border: 2px solid #5a5a5a;
     border-radius: 10%;
     position: relative;
