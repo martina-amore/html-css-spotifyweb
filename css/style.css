@@ -343,9 +343,9 @@ ul.start li .home img {
     background-color: #282828;
     height: 90px;
     color: white;
-    position: absolute;
     bottom: 0;
     width: 100vw;
+    position: fixed;
 }
 
 #bottom-bar .flex {
