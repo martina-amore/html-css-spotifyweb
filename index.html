@@ -79,7 +79,7 @@
                     <section id="main">
                         <div class="container debug">
                             <div class="mainbox recently-played">
-                                <h1>Recently played</h1>
+                                <h1 id="titleJs">Recently played</h1>
                                 <div class="flex">
                                     <div class="album">
                                         <div class="cover flex">
@@ -245,5 +245,11 @@
                 </section>
             </footer>
         </div>
+
+        <!-- SCRIPT SOSTITUZIONE -->
+        <script type="text/javascript">
+            document.getElementById('titleJs').innerHTML = 'Riprodotti di recente'
+        </script>
+
     </body>
 </html>
